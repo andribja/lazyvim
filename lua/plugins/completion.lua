@@ -3,14 +3,10 @@ return {
     "saghen/blink.cmp",
     opts = {
       sources = {
-        copilot = {
-          name = "copilot",
-          enabled = true,
-          module = "blink-cmp-copilot",
-          kind = "Copilot",
-          min_keyword_length = 6,
-          score_offset = -100, -- the higher the number, the higher the priority
-          async = true,
+        providers = {
+          copilot = {
+            score_offset = -20,
+          },
         },
       },
       -- https://cmp.saghen.dev/configuration/keymap.html#default
