@@ -12,8 +12,3 @@ map("n", "<leader>ad", "<cmd>CodeCompanion<cr>", { desc = "CodeCompanion Inline"
 map("v", "<leader>aa", "<cmd>CodeCompanionActions<cr>", { desc = "CodeCompanion Actions" })
 map("v", "<leader>ac", "<cmd>CodeCompanionChat Toggle<cr>", { desc = "CodeCompanion Chat" })
 map("n", "<leader>gb", "<cmd>Git blame<cr>", { desc = "Git blame full file" })
-
--- Ctrl+k is mapped by default but i want it for browsing completion suggestions.
--- Remove to avoid clashing.
-vim.keymap.del("i", "<C-k>")
-vim.keymap.set("i", "<C-k>", "<Nop>", { desc = "Disable default C-k" })
