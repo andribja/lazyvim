@@ -4,3 +4,6 @@
 
 vim.o.mouse = ""
 vim.g.snacks_animate = false
+
+-- seems to be only way to disable Ctrl+K in insert mode
+vim.opt.digraph = false
