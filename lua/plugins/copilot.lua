@@ -1,0 +1,23 @@
+return {}
+-- return {
+--   {
+--     "zbirenbaum/copilot.lua",
+--     enable = false,
+--     opts = {
+--       copilot_model = "claude-sonnet-4",
+--       suggestion = { enabled = false },
+--       panel = { enabled = false },
+--       filetypes = {
+--         ["*"] = true,
+--       },
+--       -- Disable copilot as an LSP source
+--       server_opts_overrides = {
+--         enable = false,
+--       },
+--     },
+--   },
+--   {
+--     "zbirenbaum/copilot-cmp",
+--     enabled = false, -- Disable copilot-cmp completely
+--   },
+-- }

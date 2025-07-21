@@ -4,6 +4,7 @@ return {
     inlay_hints = { enabled = false },
   },
   keys = {
-    { "<c-k>", false, mode = "i" }, -- interferes with completion navigation keybinds
+    -- Disable Ctrl+K in insert mode to avoid conflicts with completion
+    { "<c-k>", false, mode = "i" },
   },
 }

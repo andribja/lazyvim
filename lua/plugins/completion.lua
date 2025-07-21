@@ -4,9 +4,31 @@ return {
     opts = {
       sources = {
         providers = {
-          copilot = {
-            score_offset = -20,
+          lsp = {
+            name = "lsp",
+            enabled = true,
+            module = "blink.cmp.sources.lsp",
+            kind = "LSP",
+            min_keyword_length = 1,
+            score_offset = 90, -- the higher the number, the higher the priority
           },
+          buffer = {
+            name = "buffer",
+            enabled = true,
+            max_items = 3,
+            module = "blink.cmp.sources.buffer",
+            min_keyword_length = 2,
+            score_offset = 15, -- the higher the number, the higher the priority
+          },
+          snippets = {
+            name = "Snippets",
+            min_keyword_length = 2,
+            max_items = 3,
+          },
+          -- copilot = {
+          --   enabled = false,
+          --   score_offset = -20,
+          -- },
         },
       },
       -- https://cmp.saghen.dev/configuration/keymap.html#default
@@ -25,6 +47,13 @@ return {
 
         ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
         ["<C-e>"] = { "hide", "fallback" },
+      },
+      completion = {
+        menu = {
+          draw = {
+            columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "kind" } },
+          },
+        },
       },
     },
   },
