@@ -5,6 +5,13 @@ return {
       go = { "golangcilint" },
     },
     linters = {
+      golangcilint = {
+        args = {
+          "run",
+          "--enable-only",
+          "revive,govet", -- specify your desired linters
+        },
+      },
       sqlfluff = {
         args = {
           "lint",
